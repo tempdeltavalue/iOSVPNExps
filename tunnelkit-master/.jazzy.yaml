@@ -1,0 +1,63 @@
+clean:
+module: "TunnelKit"
+author: "Davide De Rosa"
+author_url: "https://github.com/passepartoutvpn/tunnelkit"
+
+theme: fullwidth
+
+xcodebuild_arguments:
+    - "-workspace"
+    - "TunnelKit.xcworkspace"
+    - "-scheme"
+    - "TunnelKit-iOS"
+    - "-sdk"
+    - "iphoneos"
+
+custom_categories:
+    - name: Core
+      children:
+        - BidirectionalState
+        - ConfigurationError
+        - DNSProtocol
+        - DNSResolver
+        - DNSRecord
+        - EndpointProtocol
+        - IOInterface
+        - IPv4Settings
+        - IPv6Settings
+        - LinkInterface
+        - Proxy
+        - Session
+        - SocketType
+        - TunnelInterface
+        - IPHeader
+    - name: AppExtension
+      children:
+        - GenericSocket
+        - GenericSocketDelegate
+        - InterfaceObserver
+        - Keychain
+        - KeychainError
+        - LinkProducer
+        - MemoryDestination
+        - NETCPSocket
+        - NETunnelInterface
+        - NEUDPSocket
+        - NSNotification
+    - name: Manager
+      children:
+        - VPN
+        - VPNProvider
+        - MockVPNProvider
+        - VPNConfiguration
+        - NetworkExtensionVPNConfiguration
+        - VPNStatus
+        - NSNotification
+    - name: Protocols/OpenVPN
+      children:
+        - OpenVPN
+        - OpenVPNError
+        - OpenVPNProvider
+        - OpenVPNSession
+        - OpenVPNSessionDelegate
+        - OpenVPNTunnelProvider

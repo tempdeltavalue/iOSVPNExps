@@ -1,0 +1,631 @@
+Configuring for iphoneos-cross
+    no-ec_nistp_64_gcc_128 [default]  OPENSSL_NO_EC_NISTP_64_GCC_128 (skip dir)
+    no-gmp          [default]  OPENSSL_NO_GMP (skip dir)
+    no-jpake        [experimental] OPENSSL_NO_JPAKE (skip dir)
+    no-krb5         [krb5-flavor not specified] OPENSSL_NO_KRB5
+    no-libunbound   [experimental] OPENSSL_NO_LIBUNBOUND (skip dir)
+    no-md2          [default]  OPENSSL_NO_MD2 (skip dir)
+    no-rc5          [default]  OPENSSL_NO_RC5 (skip dir)
+    no-rfc3779      [default]  OPENSSL_NO_RFC3779 (skip dir)
+    no-sctp         [default]  OPENSSL_NO_SCTP (skip dir)
+    no-shared       [default] 
+    no-ssl-trace    [default]  OPENSSL_NO_SSL_TRACE (skip dir)
+    no-ssl2         [default]  OPENSSL_NO_SSL2 (skip dir)
+    no-store        [experimental] OPENSSL_NO_STORE (skip dir)
+    no-unit-test    [default]  OPENSSL_NO_UNIT_TEST (skip dir)
+    no-weak-ssl-ciphers [default]  OPENSSL_NO_WEAK_SSL_CIPHERS (skip dir)
+    no-zlib         [default] 
+    no-zlib-dynamic [default] 
+IsMK1MF=0
+CC            =/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7
+CFLAG         =-DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot $(CROSS_TOP)/SDKs/$(CROSS_SDK) -fomit-frame-pointer -fno-common
+EX_LIBS       =
+CPUID_OBJ     =mem_clr.o
+BN_ASM        =bn_asm.o
+EC_ASM        =
+DES_ENC       =des_enc.o fcrypt_b.o
+AES_ENC       =aes_core.o aes_cbc.o
+BF_ENC        =bf_enc.o
+CAST_ENC      =c_enc.o
+RC4_ENC       =rc4_enc.o rc4_skey.o
+RC5_ENC       =rc5_enc.o
+MD5_OBJ_ASM   =
+SHA1_OBJ_ASM  =
+RMD160_OBJ_ASM=
+CMLL_ENC      =camellia.o cmll_misc.o cmll_cbc.o
+MODES_OBJ     =
+ENGINES_OBJ   =
+PROCESSOR     =
+RANLIB        =/usr/bin/ranlib
+ARFLAGS       =
+PERL          =/usr/bin/perl
+THIRTY_TWO_BIT mode
+DES_UNROLL used
+BN_LLONG mode
+RC4 uses uchar
+RC4_CHUNK is unsigned long
+BF_PTR used
+created directory `include/openssl'
+e_os2.h => include/openssl/e_os2.h
+making links in crypto...
+crypto.h => ../include/openssl/crypto.h
+opensslv.h => ../include/openssl/opensslv.h
+opensslconf.h => ../include/openssl/opensslconf.h
+ebcdic.h => ../include/openssl/ebcdic.h
+symhacks.h => ../include/openssl/symhacks.h
+ossl_typ.h => ../include/openssl/ossl_typ.h
+constant_time_test.c => ../test/constant_time_test.c
+making links in crypto/objects...
+objects.h => ../../include/openssl/objects.h
+obj_mac.h => ../../include/openssl/obj_mac.h
+making links in crypto/md4...
+md4.h => ../../include/openssl/md4.h
+md4test.c => ../../test/md4test.c
+md4.c => ../../apps/md4.c
+making links in crypto/md5...
+md5.h => ../../include/openssl/md5.h
+md5test.c => ../../test/md5test.c
+making links in crypto/sha...
+sha.h => ../../include/openssl/sha.h
+shatest.c => ../../test/shatest.c
+sha1test.c => ../../test/sha1test.c
+sha256t.c => ../../test/sha256t.c
+sha512t.c => ../../test/sha512t.c
+making links in crypto/mdc2...
+mdc2.h => ../../include/openssl/mdc2.h
+mdc2test.c => ../../test/mdc2test.c
+making links in crypto/hmac...
+hmac.h => ../../include/openssl/hmac.h
+hmactest.c => ../../test/hmactest.c
+making links in crypto/ripemd...
+ripemd.h => ../../include/openssl/ripemd.h
+rmdtest.c => ../../test/rmdtest.c
+making links in crypto/whrlpool...
+whrlpool.h => ../../include/openssl/whrlpool.h
+wp_test.c => ../../test/wp_test.c
+making links in crypto/des...
+des.h => ../../include/openssl/des.h
+des_old.h => ../../include/openssl/des_old.h
+destest.c => ../../test/destest.c
+making links in crypto/aes...
+aes.h => ../../include/openssl/aes.h
+making links in crypto/rc2...
+rc2.h => ../../include/openssl/rc2.h
+rc2test.c => ../../test/rc2test.c
+making links in crypto/rc4...
+rc4.h => ../../include/openssl/rc4.h
+rc4test.c => ../../test/rc4test.c
+making links in crypto/idea...
+idea.h => ../../include/openssl/idea.h
+ideatest.c => ../../test/ideatest.c
+making links in crypto/bf...
+blowfish.h => ../../include/openssl/blowfish.h
+bftest.c => ../../test/bftest.c
+making links in crypto/cast...
+cast.h => ../../include/openssl/cast.h
+casttest.c => ../../test/casttest.c
+making links in crypto/camellia...
+camellia.h => ../../include/openssl/camellia.h
+making links in crypto/seed...
+seed.h => ../../include/openssl/seed.h
+making links in crypto/modes...
+modes.h => ../../include/openssl/modes.h
+making links in crypto/bn...
+bn.h => ../../include/openssl/bn.h
+bntest.c => ../../test/bntest.c
+exptest.c => ../../test/exptest.c
+making links in crypto/ec...
+ec.h => ../../include/openssl/ec.h
+ectest.c => ../../test/ectest.c
+making links in crypto/rsa...
+rsa.h => ../../include/openssl/rsa.h
+rsa_test.c => ../../test/rsa_test.c
+making links in crypto/dsa...
+dsa.h => ../../include/openssl/dsa.h
+dsatest.c => ../../test/dsatest.c
+making links in crypto/ecdsa...
+ecdsa.h => ../../include/openssl/ecdsa.h
+ecdsatest.c => ../../test/ecdsatest.c
+making links in crypto/dh...
+dh.h => ../../include/openssl/dh.h
+dhtest.c => ../../test/dhtest.c
+making links in crypto/ecdh...
+ecdh.h => ../../include/openssl/ecdh.h
+ecdhtest.c => ../../test/ecdhtest.c
+making links in crypto/dso...
+dso.h => ../../include/openssl/dso.h
+making links in crypto/engine...
+engine.h => ../../include/openssl/engine.h
+enginetest.c => ../../test/enginetest.c
+making links in crypto/buffer...
+buffer.h => ../../include/openssl/buffer.h
+making links in crypto/bio...
+bio.h => ../../include/openssl/bio.h
+making links in crypto/stack...
+stack.h => ../../include/openssl/stack.h
+safestack.h => ../../include/openssl/safestack.h
+making links in crypto/lhash...
+lhash.h => ../../include/openssl/lhash.h
+making links in crypto/rand...
+rand.h => ../../include/openssl/rand.h
+randtest.c => ../../test/randtest.c
+making links in crypto/err...
+err.h => ../../include/openssl/err.h
+making links in crypto/evp...
+evp.h => ../../include/openssl/evp.h
+evp_test.c => ../../test/evp_test.c
+evp_extra_test.c => ../../test/evp_extra_test.c
+evptests.txt -> ../../test/evptests.txt
+making links in crypto/asn1...
+asn1.h => ../../include/openssl/asn1.h
+asn1_mac.h => ../../include/openssl/asn1_mac.h
+asn1t.h => ../../include/openssl/asn1t.h
+making links in crypto/pem...
+pem.h => ../../include/openssl/pem.h
+pem2.h => ../../include/openssl/pem2.h
+making links in crypto/x509...
+x509.h => ../../include/openssl/x509.h
+x509_vfy.h => ../../include/openssl/x509_vfy.h
+verify_extra_test.c => ../../test/verify_extra_test.c
+making links in crypto/x509v3...
+x509v3.h => ../../include/openssl/x509v3.h
+v3nametest.c => ../../test/v3nametest.c
+making links in crypto/conf...
+conf.h => ../../include/openssl/conf.h
+conf_api.h => ../../include/openssl/conf_api.h
+making links in crypto/txt_db...
+txt_db.h => ../../include/openssl/txt_db.h
+making links in crypto/pkcs7...
+pkcs7.h => ../../include/openssl/pkcs7.h
+making links in crypto/pkcs12...
+pkcs12.h => ../../include/openssl/pkcs12.h
+making links in crypto/comp...
+comp.h => ../../include/openssl/comp.h
+making links in crypto/ocsp...
+ocsp.h => ../../include/openssl/ocsp.h
+making links in crypto/ui...
+ui.h => ../../include/openssl/ui.h
+ui_compat.h => ../../include/openssl/ui_compat.h
+making links in crypto/krb5...
+krb5_asn.h => ../../include/openssl/krb5_asn.h
+making links in crypto/cms...
+cms.h => ../../include/openssl/cms.h
+making links in crypto/pqueue...
+pqueue.h => ../../include/openssl/pqueue.h
+making links in crypto/ts...
+ts.h => ../../include/openssl/ts.h
+making links in crypto/srp...
+srp.h => ../../include/openssl/srp.h
+srptest.c => ../../test/srptest.c
+making links in crypto/cmac...
+cmac.h => ../../include/openssl/cmac.h
+making links in ssl...
+ssl.h => ../include/openssl/ssl.h
+ssl2.h => ../include/openssl/ssl2.h
+ssl3.h => ../include/openssl/ssl3.h
+ssl23.h => ../include/openssl/ssl23.h
+tls1.h => ../include/openssl/tls1.h
+dtls1.h => ../include/openssl/dtls1.h
+kssl.h => ../include/openssl/kssl.h
+srtp.h => ../include/openssl/srtp.h
+ssltest.c => ../test/ssltest.c
+heartbeat_test.c => ../test/heartbeat_test.c
+clienthellotest.c => ../test/clienthellotest.c
+sslv2conftest.c => ../test/sslv2conftest.c
+dtlstest.c => ../test/dtlstest.c
+bad_dtls_test.c => ../test/bad_dtls_test.c
+making links in engines...
+making links in engines/ccgost...
+make[2]: Nothing to be done for `links'.
+making links in apps...
+make[1]: Nothing to be done for `links'.
+making links in test...
+make[1]: Nothing to be done for `links'.
+making links in tools...
+make[1]: Nothing to be done for `links'.
+generating dummy tests (if needed)...
+md2test.c => dummytest.c
+rc5test.c => dummytest.c
+jpaketest.c => dummytest.c
+
+Configured for iphoneos-cross.
+making all in crypto...
+/usr/bin/perl ../util/mkbuildinf.pl "/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common" "iphoneos-cross" >buildinf.h
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cryptlib.o cryptlib.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o mem.o mem.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o mem_dbg.o mem_dbg.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ex_data.o ex_data.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cpt_err.o cpt_err.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ebcdic.o ebcdic.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o uid.o uid.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o o_time.o o_time.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o o_str.o o_str.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o o_dir.o o_dir.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o o_fips.o o_fips.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o o_init.o o_init.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o fips_ers.o fips_ers.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o mem_clr.o mem_clr.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+making all in crypto/objects...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o o_names.o o_names.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o obj_dat.o obj_dat.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o obj_lib.o obj_lib.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o obj_err.o obj_err.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o obj_xref.o obj_xref.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I. -I.. -I../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cversion.o cversion.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../libcrypto.a cryptlib.o mem.o mem_dbg.o cversion.o ex_data.o cpt_err.o ebcdic.o uid.o o_time.o o_str.o o_dir.o o_fips.o o_init.o fips_ers.o mem_clr.o
+ar: creating archive ../libcrypto.a
+test -z "" || ar  r ../libcrypto.a fipscanister.o
+/usr/bin/ranlib ../libcrypto.a || echo Never mind.
+ar  r ../../libcrypto.a o_names.o obj_dat.o obj_lib.o obj_err.o obj_xref.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/md4...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o md4_dgst.o md4_dgst.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o md4_one.o md4_one.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a md4_dgst.o md4_one.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/md5...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o md5_dgst.o md5_dgst.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o md5_one.o md5_one.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a md5_dgst.o md5_one.o 
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/sha...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o sha_dgst.o sha_dgst.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o sha1dgst.o sha1dgst.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o sha_one.o sha_one.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o sha1_one.o sha1_one.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o sha256.o sha256.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o sha512.o sha512.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a sha_dgst.o sha1dgst.o sha_one.o sha1_one.o sha256.o sha512.o 
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/mdc2...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o mdc2dgst.o mdc2dgst.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o mdc2_one.o mdc2_one.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a mdc2dgst.o mdc2_one.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/hmac...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o hmac.o hmac.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o hm_ameth.o hm_ameth.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o hm_pmeth.o hm_pmeth.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a hmac.o hm_ameth.o hm_pmeth.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/ripemd...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rmd_dgst.o rmd_dgst.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rmd_one.o rmd_one.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a rmd_dgst.o rmd_one.o 
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/whrlpool...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o wp_dgst.o wp_dgst.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o wp_block.o wp_block.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a wp_dgst.o wp_block.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/des...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o set_key.o set_key.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ecb_enc.o ecb_enc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cbc_enc.o cbc_enc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ecb3_enc.o ecb3_enc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cfb64enc.o cfb64enc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cfb64ede.o cfb64ede.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cfb_enc.o cfb_enc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ofb64ede.o ofb64ede.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o enc_read.o enc_read.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o enc_writ.o enc_writ.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ofb64enc.o ofb64enc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ofb_enc.o ofb_enc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o str2key.o str2key.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o pcbc_enc.o pcbc_enc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o qud_cksm.o qud_cksm.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rand_key.o rand_key.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o des_enc.o des_enc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o fcrypt_b.o fcrypt_b.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o fcrypt.o fcrypt.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o xcbc_enc.o xcbc_enc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rpc_enc.o rpc_enc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cbc_cksm.o cbc_cksm.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ede_cbcm_enc.o ede_cbcm_enc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o des_old.o des_old.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o des_old2.o des_old2.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o read2pwd.o read2pwd.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a set_key.o  ecb_enc.o  cbc_enc.o ecb3_enc.o cfb64enc.o cfb64ede.o cfb_enc.o  ofb64ede.o enc_read.o enc_writ.o ofb64enc.o ofb_enc.o  str2key.o  pcbc_enc.o qud_cksm.o rand_key.o des_enc.o fcrypt_b.o fcrypt.o xcbc_enc.o rpc_enc.o  cbc_cksm.o ede_cbcm_enc.o des_old.o des_old2.o read2pwd.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/aes...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_misc.o aes_misc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_ecb.o aes_ecb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_cfb.o aes_cfb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_ofb.o aes_ofb.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_ctr.o aes_ctr.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_ige.o aes_ige.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_wrap.o aes_wrap.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_core.o aes_core.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o aes_cbc.o aes_cbc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a aes_misc.o aes_ecb.o aes_cfb.o aes_ofb.o aes_ctr.o aes_ige.o aes_wrap.o aes_core.o aes_cbc.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/rc2...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rc2_ecb.o rc2_ecb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rc2_skey.o rc2_skey.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rc2_cbc.o rc2_cbc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rc2cfb64.o rc2cfb64.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rc2ofb64.o rc2ofb64.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a rc2_ecb.o rc2_skey.o rc2_cbc.o rc2cfb64.o rc2ofb64.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/rc4...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rc4_enc.o rc4_enc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rc4_skey.o rc4_skey.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o rc4_utl.o rc4_utl.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a rc4_enc.o rc4_skey.o rc4_utl.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/idea...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o i_cbc.o i_cbc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o i_cfb64.o i_cfb64.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o i_ofb64.o i_ofb64.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o i_ecb.o i_ecb.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o i_skey.o i_skey.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a i_cbc.o i_cfb64.o i_ofb64.o i_ecb.o i_skey.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/bf...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bf_skey.o bf_skey.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bf_ecb.o bf_ecb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bf_enc.o bf_enc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bf_cfb64.o bf_cfb64.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bf_ofb64.o bf_ofb64.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a bf_skey.o bf_ecb.o bf_enc.o bf_cfb64.o bf_ofb64.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/cast...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o c_skey.o c_skey.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o c_ecb.o c_ecb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o c_enc.o c_enc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o c_cfb64.o c_cfb64.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o c_ofb64.o c_ofb64.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a c_skey.o c_ecb.o c_enc.o c_cfb64.o c_ofb64.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/camellia...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cmll_ecb.o cmll_ecb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cmll_ofb.o cmll_ofb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cmll_cfb.o cmll_cfb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cmll_ctr.o cmll_ctr.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cmll_utl.o cmll_utl.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o camellia.o camellia.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cmll_misc.o cmll_misc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cmll_cbc.o cmll_cbc.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a cmll_ecb.o cmll_ofb.o cmll_cfb.o cmll_ctr.o cmll_utl.o camellia.o cmll_misc.o cmll_cbc.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/seed...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o seed.o seed.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o seed_ecb.o seed_ecb.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o seed_cbc.o seed_cbc.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o seed_cfb.o seed_cfb.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o seed_ofb.o seed_ofb.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a seed.o seed_ecb.o seed_cbc.o seed_cfb.o seed_ofb.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/modes...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cbc128.o cbc128.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ctr128.o ctr128.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cts128.o cts128.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o cfb128.o cfb128.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ofb128.o ofb128.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o gcm128.o gcm128.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ccm128.o ccm128.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o xts128.o xts128.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o wrap128.o wrap128.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a cbc128.o ctr128.o cts128.o cfb128.o ofb128.o gcm128.o ccm128.o xts128.o wrap128.o 
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/bn...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_add.o bn_add.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_div.o bn_div.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_exp.o bn_exp.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_lib.o bn_lib.c
+clang: clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_ctx.o bn_ctx.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_mul.o bn_mul.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_mod.o bn_mod.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_print.o bn_print.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_rand.o bn_rand.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_shift.o bn_shift.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_word.o bn_word.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_blind.o bn_blind.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_kron.o bn_kron.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_sqrt.o bn_sqrt.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_gcd.o bn_gcd.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_prime.o bn_prime.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_err.o bn_err.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_sqr.o bn_sqr.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_asm.o bn_asm.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_recp.o bn_recp.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_mont.o bn_mont.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_mpi.o bn_mpi.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_exp2.o bn_exp2.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_gf2m.o bn_gf2m.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_nist.o bn_nist.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_depr.o bn_depr.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_const.o bn_const.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o bn_x931p.o bn_x931p.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+ar  r ../../libcrypto.a bn_add.o bn_div.o bn_exp.o bn_lib.o bn_ctx.o bn_mul.o bn_mod.o bn_print.o bn_rand.o bn_shift.o bn_word.o bn_blind.o bn_kron.o bn_sqrt.o bn_gcd.o bn_prime.o bn_err.o bn_sqr.o bn_asm.o bn_recp.o bn_mont.o bn_mpi.o bn_exp2.o bn_gf2m.o bn_nist.o bn_depr.o bn_const.o bn_x931p.o
+/usr/bin/ranlib ../../libcrypto.a || echo Never mind.
+making all in crypto/ec...
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_lib.o ec_lib.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ecp_smpl.o ecp_smpl.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ecp_mont.o ecp_mont.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ecp_nist.o ecp_nist.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_cvt.o ec_cvt.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_mult.o ec_mult.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_err.o ec_err.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_curve.o ec_curve.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_check.o ec_check.c
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_print.o ec_print.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_asn1.o ec_asn1.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_key.o ec_key.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec2_smpl.o ec2_smpl.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec2_mult.o ec2_mult.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_ameth.o ec_ameth.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ec_pmeth.o ec_pmeth.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o eck_prn.o eck_prn.c
+clang: warning: optimization flag '-fomit-frame-pointer' is not supported for target 'armv7' [-Wignored-optimization-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/gcc -arch armv7 -I.. -I../.. -I../modes -I../asn1 -I../evp -I../../include  -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -fembed-bitcode -miphoneos-version-min=8.0 -O3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk -fomit-frame-pointer -fno-common   -c -o ecp_nistp224.o ecp_nistp224.c
+make[2]: *** [ecp_nistp224.o] Hangup: 1
+make[1]: *** [subdirs] Hangup: 1
+make: *** [build_crypto] Hangup: 1
+make[2]: *** wait: Interrupted system call.  Stop.
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [eck_prn.o] Hangup: 1
+make[2]: *** wait: Interrupted system call.  Stop.
